@@ -1,0 +1,95 @@
+@import "theme/colors.scss";
+
+.Form {
+  width: 90%;
+  margin-bottom: 50px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      color: $primary;
+      font-size: 14px;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 5px 10px;
+    border: 1px solid $gray;
+    border-radius: 15px;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select {
+    padding: 5px 10px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  &__left {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__middle {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      width: 300px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    div {
+      label {
+        font-size: 12px;
+        color: $black;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 10px;
+
+    Button:first-child {
+      background-color: $red;
+      color: $white;
+    }
+
+    Button:last-child {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}

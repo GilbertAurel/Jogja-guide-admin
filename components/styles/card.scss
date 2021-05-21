@@ -1,0 +1,132 @@
+@import "theme/colors.scss";
+
+.Card {
+  height: 150px;
+  width: 90%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $white;
+  border-radius: 20px;
+  gap: 20px;
+  box-shadow: 0.5px 0.5px 2px $gray;
+
+  &__found-label {
+    width: 90%;
+    padding-left: 20px;
+    color: $gray;
+  }
+
+  &__image {
+    position: relative;
+    height: 120px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      min-height: 120px;
+      max-width: 200px;
+    }
+  }
+
+  &__info {
+    height: 120px;
+    width: 20%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2px;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    &-categories {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+
+  &__location {
+    height: 100px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    section p:first-child {
+      color: $primary;
+    }
+  }
+
+  &__description {
+    height: 100px;
+    flex: 1;
+
+    p:first-child {
+      color: $primary;
+    }
+
+    p:last-child {
+      height: 80px;
+      max-width: 900px;
+      padding-right: 10px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray;
+        border-radius: 10px;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
